@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twilight Community</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Twilight Community</h1>
+        <div id="content">
+            <!-- Welcome Page -->
+            <div id="welcome" class="slide">
+                <h2>Welcome to Twilight Community</h2>
+                <p>
+                    A members-only community that caters to the needs of experience lovers. 
+                    We curate events, hangouts, and related activities with the aim of creating 
+                    an enjoyable and immersive experience for our members.
+                </p>
+                <p>
+                    Twilight Community remains an exclusive community to members only so that 
+                    we can maintain a safe space while curating tailored experiences for our members.
+                </p>
+                <button id="to-rules">Next: Rules & Regulations</button>
+            </div>
+
+            <!-- Rules and Regulations Page -->
+            <div id="rules" class="slide hidden">
+                <h2>Rules & Regulations</h2>
+                <p>We have zero tolerance for discrimination, assault of any kind, or violence.</p>
+                <p>Our events are for members only; your plus one must also be a member.</p>
+                <p>Anyone who doesn't maintain respect with members of the community or follow our rules will be automatically banned from the community.</p>
+                <label>
+                    <input type="checkbox" id="agree-checkbox" required>
+                    I understand and agree with all rules mentioned above.
+                </label>
+                <button id="to-questionnaire" class="hidden">Next: Questionnaire</button>
+            </div>
+            <form id="questionnaire" class="hidden">
+                  <!-- Slide 1 -->
+                  <div class="slide">
+                    <label for="q1">What is your full name?</label>
+                    <input type="text" id="q1" name="full_name" required>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="slide hidden">
+                    <label for="q2">What do you prefer to be called?</label>
+                    <input type="text" id="q2" name="preferred_name" required>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="slide hidden">
+                    <label for="q3">What is your email address?</label>
+                    <input type="email" id="q3" name="email" required>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="slide hidden">
+                    <label for="q4">What is your location?</label>
+                    <input type="text" id="q4" name="location" required>
+                </div>
+
+                <!-- Slide 5 -->
+                <div class="slide hidden">
+                    <label for="q5">What is your Instagram (we do not accept business pages)?</label>
+                    <input type="text" id="q5" name="instagram" required>
+                </div>
+
+                <!-- Slide 6 -->
+                <div class="slide hidden">
+                    <label for="q6">Have you been to any of our events before?</label>
+                    <select id="q6" name="been_to_events" required>
+                        <option value="">Select an option</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+
+                <!-- Slide 7 -->
+                <div class="slide hidden">
+                    <label for="q7">How did you hear about us?</label>
+                    <input type="text" id="q7" name="referral_source" required>
+                </div>
+
+                <!-- Slide 8 -->
+                <div class="slide hidden">
+                    <label for="q8">Additional comments (any comment or information you would like to share):</label>
+                    <textarea id="q8" name="additional_comments"></textarea>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="navigation-buttons">
+                    <button type="button" id="prev" class="hidden">Previous</button>
+                    <button type="button" id="next">Next</button>
+                    <button type="submit" id="submit" class="hidden">Submit</button>
+                </div>
+            </form>
+
+            <!-- Results Page -->
+            <div id="results" class="hidden">
+                <h2>Thank you for completing the questionnaire!</h2>
+                <p id="results-text"></p>
+                <button id="restart">Restart</button>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
